@@ -4,7 +4,11 @@
 
 angular.module('LunchApp', [])
 
-.controller('LunchCheckController', function($scope){
+.controller('LunchCheckController', LunchCheckController);
+
+LunchCheckController.$inject = ['$scope'];
+
+function LunchCheckController($scope){
 
 $scope.list = "";
 $scope.message = "";
@@ -41,7 +45,7 @@ $scope.check = function(){
 }
 
 
-});
+}
 
 
 })();
